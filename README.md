@@ -21,7 +21,7 @@ conda activate binance-trading-bot
 The `main.py` file allow to run specific modules. You can run module using :
 
 ```
-python src/main. -m {module}
+python src/main.py -m {module}
 ```
 
 ## How to test
