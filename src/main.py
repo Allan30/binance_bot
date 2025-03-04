@@ -4,7 +4,7 @@ import argparse
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Choisissez un module à utiliser.")
+    parser = argparse.ArgumentParser(description="Choose which module to use.")
 
     parser.add_argument('-m', '--module', required=True, help="Module name to launch")
 
