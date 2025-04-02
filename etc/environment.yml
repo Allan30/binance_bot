@@ -10,6 +10,7 @@ dependencies:
   - requests
   - pip
   - python-binance
+  - redis==5.2.1
   - pip:
       - ta
       - plotly
