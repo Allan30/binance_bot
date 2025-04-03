@@ -10,10 +10,14 @@ def main():
 
     args = parser.parse_args()
 
-    if args.module == 'scheduler':
-        from src.scripts.trade_scheduler import TradeScheduler
-        scheduler = TradeScheduler()
-        asyncio.run(scheduler.run())
+    if args.module == 'agent_receiver_kline_stream':
+        from src.scripts.agent_stream_receiver import AgentStreamReceiver
+        agent = AgentStreamReceiver(
+            "test",
+            "test",
+            "wss://fstream.binance.com/ws/btcusdt@kline_1m"
+        )
+        asyncio.run(agent.run())
     else:
         print(f"Module {args.module} unknow")
         sys.exit(1)
